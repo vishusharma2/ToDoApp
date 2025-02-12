@@ -9,11 +9,10 @@ function App() {
   const [newTask, NextTodoItem] = useState([]);
 
   const handleNewItem = (itemName, itemDate, itemTime) => {
-    const newItem = [
-      ...newTask,
+    NextTodoItem((currVal) => [
+      ...currVal,
       { name: itemName, date: itemDate, time: itemTime },
-    ];
-    NextTodoItem(newItem);
+    ]);
   };
 
   const handleDeleteItem = (itemName) => {
