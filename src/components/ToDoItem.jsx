@@ -1,3 +1,4 @@
+import { FaDeleteLeft } from "react-icons/fa6";
 function ToDoItem({ toDoName, toDoDate, toDotime, OnDelete }) {
   return (
     <div className="container">
@@ -11,7 +12,7 @@ function ToDoItem({ toDoName, toDoDate, toDotime, OnDelete }) {
             className="btn btn-danger kg-button"
             onClick={() => OnDelete(toDoName)}
           >
-            Delete
+            <FaDeleteLeft />
           </button>
         </div>
       </div>
